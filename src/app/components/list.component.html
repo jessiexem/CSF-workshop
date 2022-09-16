@@ -1,0 +1,36 @@
+<div>
+    <div>
+        <h2>List of Contacts</h2>
+    </div>
+    <div class="box-it" *ngIf="contactList==null"> 
+        <h4>There are no contacts to display.</h4>
+    </div>
+    <div class="box-it" *ngIf="contactList!==null && contactList.length>0">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let c of contactList">
+                <tr>
+                    <td>
+                        {{ c.name }}
+                    </td>
+                    <td>
+                        {{ c.mobile }}
+                    </td>
+                    <td>
+                        {{ c.email }}
+                    </td>
+                    <td>
+                        <button type="button" (click)="deleteContact(c.email)">X</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

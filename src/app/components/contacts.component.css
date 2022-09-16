@@ -1,0 +1,27 @@
+top-nav {
+    background-color: blueviolet;
+}
+
+.box-it {
+    border: 1px solid gray;
+    /* padding: 10px; */
+    margin: 10px;
+    /* border-radius: 10px; */
+}
+
+
+h2 {
+      text-align: center;
+      border: 1px solid gray;
+      background-color: lightgray;
+    }
+
+.form-btn, .btn-head {
+    background-color: lightskyblue;
+    border: 1px solid gray;
+}
+
+.btn-head {
+    width: 100%;
+    border-radius: 0px;
+}

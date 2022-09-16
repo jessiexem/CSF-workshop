@@ -1,0 +1,32 @@
+ <div>
+    <div>
+        <h2>Add a Contact</h2>
+    </div>
+    <div class="box-it">
+        <form [formGroup]="contactForm" (ngSubmit)="processAddContact()">
+            <table class="table">
+              <tbody>
+                  <tr>
+                      <td>Name:</td>
+                      <td><input type="text" formControlName="name"></td>
+                  </tr>
+                  <tr>
+                    <td>Email:</td>
+                    <td><input type="text" formControlName="email"></td>
+                  </tr>
+                  <tr>
+                    <td>Mobile:</td>
+                    <td><input type="text" formControlName="mobile"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>
+                        <button type="submit" class="btn btn-lg btn-light form-btn" style="float: right" [disabled]="contactForm.invalid">Add</button>
+                      </td>
+                  </tr>
+              </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
