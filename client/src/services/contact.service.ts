@@ -3,9 +3,13 @@ import { Injectable } from "@angular/core";
 import { firstValueFrom, Subject } from "rxjs";
 import { Contact } from "src/app/models";
 
-const URL_ADD_CONTACT = "http://localhost:8090/api/addContact"
-const URL_GET_CONTACTS = "http://localhost:8090/api/contacts"
-const URL_DELETE_CONTACT = "http://localhost:8090/api/deleteContact"
+// const URL_ADD_CONTACT = "http://localhost:8090/api/addContact"
+// const URL_GET_CONTACTS = "http://localhost:8090/api/contacts"
+// const URL_DELETE_CONTACT = "http://localhost:8090/api/deleteContact"
+
+const URL_ADD_CONTACT = "https://jgcontactbook.herokuapp.com/api/addContact"
+const URL_GET_CONTACTS = "https://jgcontactbook.herokuapp.com/api/contacts"
+const URL_DELETE_CONTACT = "https://jgcontactbook.herokuapp.com/api/deleteContact"
 
 @Injectable()
 export class ContactService {
