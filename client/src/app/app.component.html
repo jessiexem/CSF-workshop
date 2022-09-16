@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+      <button type="button" class="btn btn-lg btn-light btn-head" (click)="loadAddForm()">Add</button>
+    </div>
+    <div class="col col-lg-2">
+      <button type="button" class="btn btn-lg btn-light btn-head" (click)="loadListContact()">List</button>
+    </div>
+  </div>
+</div>
+<br>    
+
+<div *ngIf="isLoadAddForm">
+  <app-contacts (onNewContact)="saveContact($event)"></app-contacts>
+</div>
+
+<div *ngIf="isLoadListContacts">
+  <app-list (onDelete)="deleteContact($event)"></app-list>
+</div>
